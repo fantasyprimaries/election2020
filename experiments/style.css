@@ -1,47 +1,47 @@
 #choice-container {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
 #search-choices {
-	padding: 20px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #search-note {
-	padding: 20px;
+  padding: 20px;
 }
 
 #search-note.hidden {
-	display: none;
+  display: none;
 }
 
 .rank-holder .rank-number,
 .rank-holder .rank-item,
 .rank-holder .choice-holder {
-	display: inline;
+  display: inline;
 }
 
 .rank-holder, .choice-holder {
-	margin: 10px;
-	padding: 10px;
-	border: 2px solid gray;
-	border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
 }
 
 .rank-item .choice-holder {
-	border: none;
+  border: none;
 }
 
 .choice-holder:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .choice-holder.dragging {
-	border: 1px dashed gray;
+  border: 1px dashed gray;
 }
 
 .choice-holder.hidden {
-	display: none;
+  display: none;
 }
