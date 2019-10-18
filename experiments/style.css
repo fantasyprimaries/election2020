@@ -9,11 +9,11 @@
   width: 100%;
 }
 
-#search-note {
+#search-note-holder {
   padding: 20px;
 }
 
-#search-note.hidden {
+#search-note-holder.hidden {
   display: none;
 }
 

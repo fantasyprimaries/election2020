@@ -45,6 +45,7 @@ function makeChoices(text) {
  */
 function doSearch(queryText, choiceList) {
   const choiceContainerEl = document.getElementById('choice-container');
+  const searchNoteHolderEl = document.getElementById('search-note-holder');
   const searchNoteEl = document.getElementById('search-note');
   const count = choiceList.reduce((agg, choice) => {
     const isMatch = choice.choiceText.includes(queryText);
@@ -64,9 +65,9 @@ function doSearch(queryText, choiceList) {
   if (queryText.length > 0) {
     const countNote = `Found ${count} result${count === 1 ? '' : 's'}.`;
     searchNoteEl.innerText = countNote;
-    searchNoteEl.classList.remove('hidden');
+    searchNoteHolderEl.classList.remove('hidden');
   } else {
-    searchNoteEl.classList.add('hidden');
+    searchNoteHolderEl.classList.add('hidden');
   }
 }
 
@@ -80,6 +81,10 @@ function initSearch(choiceList) {
   searchEl.addEventListener('input', (e) => {
     const queryText = searchEl.value;
     doSearch(queryText, choiceList);
+  });
+  const searchClearEl = document.getElementById('search-clear');
+  searchClearEl.addEventListener('click', (e) => {
+    doSearch('', choiceList);
   });
 }
 
